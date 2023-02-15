@@ -6,7 +6,7 @@ export default function Pageone(props){
 
     const [pageOneState, setpageOneState] = useState({
         click:true,
-        img:"./live-delivery.webm",
+        img:"./live-delivery-two.mp4",
         title:"Live Delivery",
         description:"Driver arrives at the facility with an empty trailer and waits while the trailer is loaded with a delivery. Once complete the driver departs with the new load."
     });
@@ -26,10 +26,11 @@ export default function Pageone(props){
         setpageOneState({
             ...pageOneState,
             click:true,
-            img:"./live-delivery.webm",
+            img:"./live-delivery-two.mp4",
             title:"Live Delivery",
             description:"Driver arrives at the facility with an empty trailer and waits while the trailer is loaded with a delivery. Once complete the driver departs with the new load."
         });
+
         /*return(
                 <video width="370" height="280" style={{"borderRadius":"2px;"}} autoPlay muted>
                     <source src={pageOneState.img} type="video/webm" />
@@ -42,11 +43,10 @@ export default function Pageone(props){
         setpageOneState({
             ...pageOneState,
             click:false,
-            img:"./drop-off-delivery.webm",
+            img:"./drop-off-delivery-two.mp4",
             title:"Drop off Delivery",
             description:"Driver arrives at facility with trailer. The driver docks and drops off the trailer. Once dropped off, the driver leaves or proceeds to pick up a new trailer (either empty or preloaded)."
         });
-
    
         /*return(
             <video width="370" height="280" style={{"borderRadius":"2px;"}} autoPlay muted>
@@ -63,23 +63,23 @@ export default function Pageone(props){
                 <i className="bi bi-arrow-left-short"></i>
             </div>*/}
 
+            {/*<div className="scanlicenseArrow">
+                <i className="bi bi-arrow-left-short"><i>
+            </div>*/}
+<div class="outerContainer">
             <div className="scanlicenseTextAll">
-                <h3>Select Delivery Type</h3>
+                <h5>Select Delivery Type</h5>
             </div>
-
             <div className="photobox">
-
-                <video key={pageOneState.img} width="370" height="280" style={{"borderRadius":"2px;"}} autoPlay muted>
-                    <source src={pageOneState.img} type="video/webm" />
+                <video key={pageOneState.img} width="360" height="270" style={{"borderRadius":"2px;"}} autoPlay muted loop playsInline>
+                    <source src={pageOneState.img} type="video/mp4" />
                 </video>
                 
-                {}
                 {/*<img src={pageOneState.img} width="370" height="190"/>*/}
                 
                 {/*<iframe width="370" height="190"
                 src={pageOneState.img}>
                 </iframe>*/}
-         
             </div>
 
             <div className="licensebox">
@@ -90,31 +90,32 @@ export default function Pageone(props){
                     Drop off Delivery
                 </div>
             </div>
+</div>
 
-            <div className="mainTextAll">
-                <h5>{pageOneState.title}</h5>
-                <div className="mainTextPara">
-                    <p>{pageOneState.description}</p>
-                </div>
-            </div>
+<div class="outerContainerTwo">
+    <div className="mainTextAll">
+        <h5>{pageOneState.title}</h5>
+        <div className="mainTextPara">
+            <p>{pageOneState.description}</p>
+            
+        </div>
+    </div>
+</div>
 
-            <div className="buttonbox">
-                <div className="buttonback">
-                    Back
-                </div>
-                <div className="buttonselect">
-                    Select
-                </div>
-            </div>
+<div class="outerContainerTwo">
+    <div className="buttonbox">
+        <div className="buttonback">
+            Back
+        </div>
+        <div className="buttonselect">
+            Select
+        </div>
+    </div>
+</div>
 
-            {/*<div style={{marginTop:"280px"}}>
-                <div className="d-grid gap-2">
-                    <button className="btn btn-secondary" type="submit" value="Continue" onClick={nextPage}>
-                        <strong>NEXT</strong>
-                    </button>
-                </div>
-            </div>*/}
 
+            
+            
     
             </div>
         </>
