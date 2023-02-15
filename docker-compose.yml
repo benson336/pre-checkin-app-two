@@ -1,0 +1,12 @@
+version: '3'
+services:
+  client:
+    build: ./client
+    container_name: pre-checkin-app
+    ports:
+      - '3002:3002'
+    stdin_open: true
+    tty: true
+    volumns: 
+      - ./client:/usr/src/app/my-app
+      - ./usr/src/app/my-app/node_modules
